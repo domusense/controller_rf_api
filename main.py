@@ -1,5 +1,8 @@
 import falcon
 from rpi_rf import RFDevice
+import logging
+
+logger = logging.getLogger(__name__)
 
 GPIO = 17
 TX_PROTO = 1
