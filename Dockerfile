@@ -1,4 +1,4 @@
-FROM python:2.7-stretch
+FROM python:2.7.15-stretch
 
 RUN pip install gunicorn json-logging-py
 
