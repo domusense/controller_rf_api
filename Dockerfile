@@ -1,9 +1,13 @@
-FROM python:3.6-stretch
+FROM python:3.6-stretc
+
+
+RUN mkdir /gunicorn
+WORKDIR /gunicorn
 
 RUN pip install gunicorn json-logging-py
 RUN pip install falcon
 RUN pip install rpi-rf 
-MKDIR /gunicorn
+
 COPY logging.conf /gunicorn/logging.conf
 COPY gunicorn.conf /gunicorn/gunicorn.conf
 COPY main.py /gunicorn/main.py
