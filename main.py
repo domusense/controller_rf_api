@@ -27,7 +27,7 @@ class tx(object):
     def on_get(self, req, res,code, repeats):
         """Handles all GET requests."""
         res.status = falcon.HTTP_200  # ok
-        transmit_code(int(code), int(repeats)
+        transmit_code(int(code), int(repeats))
         res.body = ('Code transmitted: ' + code)
 
 # Create the Falcon application object
