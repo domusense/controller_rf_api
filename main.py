@@ -8,7 +8,7 @@ GPIO = 22
 TX_PROTO = 1
 TX_PULSELENGTH = None
 
-def transmit_code(code):
+def transmit_code(code, repeats):
     """tx RF code"""
     # init the gpio device
     rfdevice = RFDevice(gpio=GPIO,
@@ -27,7 +27,7 @@ class tx(object):
     def on_get(self, req, res,code, repeats = 8):
         """Handles all GET requests."""
         res.status = falcon.HTTP_200  # ok
-        transmit_code(int(code))
+        transmit_code(int(code), int(repeats)
         res.body = ('Code transmitted: ' + code)
 
 # Create the Falcon application object
