@@ -14,7 +14,7 @@ def transmit_code(code, repeats):
     rfdevice = RFDevice(gpio=GPIO,
                     tx_proto=TX_PROTO,
                     tx_pulselength = TX_PULSELENGTH,
-                    tx_repeat=repeats)
+                    tx_repeat = repeats)
                     #tx_length=24,
                     #rx_tolerance=80)
 
