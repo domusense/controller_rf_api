@@ -1,4 +1,4 @@
-FROM python:3.6-stretc
+FROM python:3.6-stretch
 
 
 RUN mkdir /gunicorn
