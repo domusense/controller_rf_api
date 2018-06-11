@@ -24,7 +24,7 @@ def transmit_code(code, repeats):
     rfdevice.cleanup()
 
 class tx(object):
-    def on_get(self, req, res,code, repeats = 8):
+    def on_get(self, req, res,code, repeats):
         """Handles all GET requests."""
         res.status = falcon.HTTP_200  # ok
         transmit_code(int(code), int(repeats)
