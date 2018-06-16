@@ -4,7 +4,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-GPIO = 22
+GPIO = 17
 TX_PROTO = 1
 TX_PULSELENGTH = None
 
