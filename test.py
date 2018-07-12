@@ -1,4 +1,3 @@
-import falcon
 from rpi_rf import RFDevice
 
 GPIO = 17
