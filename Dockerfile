@@ -1,10 +1,11 @@
 FROM resin/rpi-raspbian:stretch-20180626
 
 RUN apt-get update && apt-get upgrade
-RUN pip install gunicorn json-logging-py install falcon rpi-rf
-RUN sudo apt-get install pigpio python-pigpio python3-pigpio -y
-
+RUN apt-get install python3 python3-pip pigpio python-pigpio python3-pigpio -y
+RUN pip3 install setuptools
+RUN pip3 install gunicorn json-logging-py falcon rpi-rf
 RUN mkdir /srv/gunicorn
+
 WORKDIR /srv/gunicorn
 
 COPY logging.conf logging.conf
