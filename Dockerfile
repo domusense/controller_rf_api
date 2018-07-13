@@ -7,6 +7,7 @@ RUN apt-get install gcc
 RUN wget abyz.me.uk/rpi/pigpio/pigpio.tar
 RUN tar xf pigpio.tar
 RUN cd PIGPIO
+RUN ./configure
 RUN make
 RUN sudo make install
 RUN rm pigpio.tar
