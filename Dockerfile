@@ -9,8 +9,8 @@ RUN tar xf pigpio.tar
 RUN cd PIGPIO
 RUN make
 RUN sudo make install
-rm pigpio.tar
-sudo rm -rf PIGPIO
+RUN rm pigpio.tar
+RUN sudo rm -rf PIGPIO
 
 #RUN apt-get update && apt-get upgrade
 RUN apt-get install pigpio python3-pigpio -y
