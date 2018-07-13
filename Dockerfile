@@ -4,6 +4,7 @@ RUN mkdir /srv/gunicorn
 
 WORKDIR /srv/gunicorn
 
+RUN apt-get install unzip -y
 RUN wget https://github.com/joan2937/pigpio/archive/master.zip
 RUN unzip master.zip
 RUN cd pigpio-master
