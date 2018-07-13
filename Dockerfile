@@ -4,14 +4,13 @@ RUN mkdir /srv/gunicorn
 
 WORKDIR /srv/gunicorn
 
-RUN apt-get install unzip -y
-RUN wget https://github.com/joan2937/pigpio/archive/master.zip
-RUN unzip master.zip
-RUN cd pigpio-master
+RUN wget abyz.me.uk/rpi/pigpio/pigpio.tar
+RUN tar xf pigpio.tar
+RUN cd PIGPIO
 RUN make
 RUN sudo make install
-RUN rm master.zip
-RUN sudo rm -rf pigpio-master
+rm pigpio.tar
+sudo rm -rf PIGPIO
 
 #RUN apt-get update && apt-get upgrade
 RUN apt-get install pigpio python3-pigpio -y
