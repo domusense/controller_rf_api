@@ -1,9 +1,9 @@
 FROM python:3.6-stretch
 
 RUN mkdir /srv/gunicorn
+WORKDIR /srv/gunicorn
 
-
-RUN cd /srv
+RUN apt-get install gcc
 RUN wget abyz.me.uk/rpi/pigpio/pigpio.tar
 RUN tar xf pigpio.tar
 RUN cd PIGPIO
@@ -19,7 +19,7 @@ RUN pip install falcon
 RUN pip install rpi-rf 
 
 
-WORKDIR /srv/gunicorn
+
 COPY logging.conf logging.conf
 COPY gunicorn.conf gunicorn.conf
 COPY main.py main.py
