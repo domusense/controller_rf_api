@@ -11,12 +11,6 @@ TX_GPIO2 = 17
 TX_HIGH = "008081FF"
 TX_LOW = "000081FF"
 
-wave_forms = [
-              [Signal(800, TX_LOW),
-              Signal(400, TX_HIGH)],
-              [Signal(400, TX_LOW),
-              Signal(800, TX_HIGH)]
-          ]
 # show the code in stdout
 #for i in range(0, 48, 2):
 #    if (code[i].length == 800 and code[i].state == TX_LOW):
@@ -46,6 +40,13 @@ class Signal:
       return wave_form
 
 def transmit_curtain_code(pulses):
+     wave_forms = [
+              [Signal(800, TX_LOW),
+              Signal(400, TX_HIGH)],
+              [Signal(400, TX_LOW),
+              Signal(800, TX_HIGH)]
+    ]
+
     square = []
 
     # init pigpio
