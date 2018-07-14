@@ -40,7 +40,7 @@ class Signal:
       return wave_form
 
 def transmit_curtain_code(pulses):
-     wave_forms = [
+    wave_forms = [
               [Signal(800, TX_LOW),
               Signal(400, TX_HIGH)],
               [Signal(400, TX_LOW),
