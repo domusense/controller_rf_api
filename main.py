@@ -4,6 +4,7 @@ import logging
 import pigpio
 import time
 import random
+import Signal
 
 wave_forms = [
               [Signal(800, TX_LOW),
