@@ -26,7 +26,7 @@ wave_forms = [
 
 #print(2)
 
-tx(code)
+#tx(code)
 
 logger = logging.getLogger(__name__)
 
