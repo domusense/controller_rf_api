@@ -4,7 +4,7 @@ import logging
 import pigpio
 import time
 import random
-import Signal
+from Signal import Signal
 
 TX_GPIO1 = 24
 TX_GPIO2 = 17
